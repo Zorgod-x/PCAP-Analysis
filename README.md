@@ -48,7 +48,7 @@ Packet Filtering: Apply filters in Wireshark to focus on specific traffic of int
 -Payload Inspection: Examine packet payloads for signs of malware, command and control traffic, or data exfiltration attempts.
 
 # Troubleshooting:
-1.first thing to look for : slow application response time could be http, dns, smb   # http.time>2 = slow web server
+1. First thing to look for : slow application response time could be http, dns, smb   # http.time>2 = slow web server
 2. Large network latency
 3. packet loss: time to figure out if something is missing and then retransmit       #tcp.analysis.lost_segment
 Usually means network problem : congestion or link level errors (bad cable / transceiver)
