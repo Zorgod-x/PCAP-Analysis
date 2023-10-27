@@ -13,11 +13,11 @@ PCAP Acquisition: Obtain a PCAP file from a network capture tool or a publicly a
 - Network tap device
 
 # Before capturing
--who is impacted?
--all the time?
--what applications?
--what servers are they interacting with?
--what network path?
+Who is impacted?
+All the time?
+What applications?
+What servers are they interacting with?
+What network path?
 
 # Phase 2: Initial Analysis
 
