@@ -26,28 +26,28 @@ PCAP Inspection: Use Wireshark to open the PCAP file and perform initial inspect
 Packet Filtering: Apply filters in Wireshark to focus on specific traffic of interest, such as HTTP, DNS, or suspicious IP addresses.
 
 1. Filtering packets based on IP address
-  ip.addr==    
-  ipv6.addr==
+ - ip.addr==    
+ - ipv6.addr==
 2. Subnet filtering allows for filtering a range of addresses within a specific subnet.
-  ip.addr== x./0-32    
+ - ip.addr== x./0-32    
 3. Setting a range of ports using the membership operator.
-  tcp.port ==
-  tcp.port in {80,443,8000..8005}
+ - tcp.port==
+ - tcp.port in {80,443,8000..8005}
 5. Filters in Wireshark for TCP analysis.
-  tcp.analysys.flags
+ - tcp.analysys.flags
 6. Slow protocol response time
-  dns.time>
-  http.time>
-  smb.time>
+ - dns.time>
+ - http.time>
+ - smb.time>
 7. Analyzing TCP reset flags is important for investigating connection issues.
-  tcp.flags.reset==1
+ - tcp.flags.reset==1
 
-# Phase 3: Deep Analysis
--Protocol Analysis: Analyze different network protocols (e.g., HTTP, DNS, SMB) to identify potential security issues, anomalies, or unauthorized activities.
--Traffic Flow Analysis: Study the flow of network traffic, looking for unusual communication patterns, large data transfers, or unexpected connections.
--Payload Inspection: Examine packet payloads for signs of malware, command and control traffic, or data exfiltration attempts.
+# Phase 3: Deep Analysis :
+- Protocol Analysis: Analyze different network protocols (e.g., HTTP, DNS, SMB) to identify potential security issues, anomalies, or unauthorized activities.
+- Traffic Flow Analysis: Study the flow of network traffic, looking for unusual communication patterns, large data transfers, or unexpected connections.
+- Payload Inspection: Examine packet payloads for signs of malware, command and control traffic, or data exfiltration attempts.
 
-# Troubleshooting:
+# Troubleshooting :
 1. First thing to look for : slow application response time could be http, dns, smb   # http.time>2 = slow web server
 2. Large network latency
 3. packet loss: time to figure out if something is missing and then retransmit       #tcp.analysis.lost_segment
